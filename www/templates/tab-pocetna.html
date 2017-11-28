@@ -1,0 +1,21 @@
+<ion-view view-title="Početna">
+  <ion-content>
+      <div class="list list-inset">
+          <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input ng-change="pretrazi()" type="text" placeholder="Search" ng-model="search.input">
+          </label>
+      </div>
+   <a href="#/tab/novi" class="button button-block button-balanced">
+     Novi
+   </a>
+    <ion-list>
+      <ion-item class="item-avatar item-icon-right"
+                ng-repeat="student in studenti" type="item-text-wrap"
+                href="#/tab/pocetna/{{student.sifra}}">
+        <p>{{ student.ime }} {{ student.prezime }}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
