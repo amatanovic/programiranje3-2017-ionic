@@ -35,7 +35,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             .state('tab', {
                 url: '/tab',
                 abstract: true,
-                templateUrl: 'templates/tabs.html'
+                templateUrl: 'templates/tabs.html',
+                controller: 'DashCtrl'
             })
 
             .state('tab.pocetna', {
